@@ -22,11 +22,6 @@ const routes = [
   }
 ]
 
-router.resolve({
-  name: 'PageNotFound',
-  params: { pathMatch: ['not', 'found'] },
-}).href // '/not/found'
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
