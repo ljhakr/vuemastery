@@ -3,9 +3,26 @@
     <router-link :to="{name: 'EventList'}">Events</router-link> |
     <router-link :to="{name: 'About'}">About</router-link>
   </div>
+
+  <button @click="back">Back</button>
+  <button @click="forward">Forward</button>
+  <br>
+
   <router-view/>
 </template>
 
+<script>
+  export default {
+    methods: {
+      back(){
+        this.$router.go(-1);
+      },
+      forward(){
+        this.$router.go(1);
+      },
+    },
+  }
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
